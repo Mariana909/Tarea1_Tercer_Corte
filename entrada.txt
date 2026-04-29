@@ -1,0 +1,9 @@
+x = a + b
+y = (a + b) * c
+resultado = 10 + 3 * 2
+a + b * c
+(x + y)
+x = x + 1
+= + *
+123
+x = (a + b

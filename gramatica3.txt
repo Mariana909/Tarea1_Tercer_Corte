@@ -1,0 +1,19 @@
+Gramatica Llamadas y Asignaciones
+17
+P -> Stmt Pp
+Pp -> pyc Stmt Pp
+Pp -> _
+Stmt -> id asig E
+Stmt -> id pari Args pard
+Args -> E Argsp
+Argsp -> coma E Argsp
+Argsp -> _
+E -> T Ep
+Ep -> opsuma T Ep
+Ep -> _
+T -> F Tp
+Tp -> opmul F Tp
+Tp -> _
+F -> pari E pard
+F -> id
+F -> num

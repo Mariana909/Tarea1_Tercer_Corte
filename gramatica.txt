@@ -1,0 +1,13 @@
+Gramatica Aritmetica con Asignacion
+11
+S -> id asig E
+S -> E
+E -> T Ep
+Ep -> opsuma T Ep
+Ep -> _
+T -> F Tp
+Tp -> opmul F Tp
+Tp -> _
+F -> pari E pard
+F -> id
+F -> num

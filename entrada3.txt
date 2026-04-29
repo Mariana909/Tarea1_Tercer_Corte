@@ -1,0 +1,10 @@
+x = a + b
+print ( x )
+resultado = 10 + 3 * 2
+log ( a , b , c )
+x = foo + 1 ; print ( x )
+z = ( a + b ) * c
+calcular ( x + 1 , y * 2 )
+x = y ; call ( x , y )
+= ( )
+foo (
