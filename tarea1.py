@@ -16,6 +16,9 @@ TOKEN_SPEC = [
     ("pyc",    r";"),
     ("coma",   r","),
     ("num",    r"[0-9]+"),
+    ("if",     r"\bif\b"),
+    ("then",   r"\bthen\b"),
+    ("else",   r"\belse\b"),
     ("id",     r"[a-zA-Z][0-9a-zA-Z]*"),
     ("WS",     r"[ \t]+"),
 ]

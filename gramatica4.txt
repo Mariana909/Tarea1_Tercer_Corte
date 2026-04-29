@@ -1,0 +1,23 @@
+Gramatica Condicionales y Asignaciones
+21
+P -> Stmt Pp
+Pp -> pyc Stmt Pp
+Pp -> _
+Stmt -> if Cond then Stmt Elsep
+Stmt -> id Stmtr
+Stmt -> num
+Stmt -> pari E pard
+Elsep -> else Stmt
+Elsep -> _
+Stmtr -> asig E
+Stmtr -> Tp Ep
+Cond -> E relop E
+E -> T Ep
+Ep -> opsuma T Ep
+Ep -> _
+T -> F Tp
+Tp -> opmul F Tp
+Tp -> _
+F -> pari E pard
+F -> id
+F -> num
