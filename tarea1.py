@@ -298,17 +298,17 @@ def parsear(tokens, gramatica, tabla_M, psp_obj, k):
         tope_sim, tope_nodo = pila[-1]
         tok_tipo = lookahead(1)[0]
 
-        # ── Fin de pila ──
+        #  Fin de pila 
         if tope_sim == "$":
             return tok_tipo == "$", raiz
 
-        # ── Símbolo vacío ──
+        #  Símbolo vacío 
         elif tope_sim == "_":
             pila.pop()
             if tope_nodo is not None:
                 tope_nodo.agregar(Nodo("ε"))
 
-        # ── No terminal: consultar tabla M ──
+        #  No terminal: consultar tabla M 
         elif tope_sim in no_terminales:
             alternativas = tabla_M.get(tope_sim, {}).get(tok_tipo)
 
@@ -343,7 +343,7 @@ def parsear(tokens, gramatica, tabla_M, psp_obj, k):
             for sim, hijo in reversed(list(zip(prod, hijos))):
                 pila.append((sim, hijo))
 
-        # ── Terminal: debe coincidir ──
+        #  Terminal: debe coincidir 
         else:
             tok_val = tokens[pos][1] if pos < len(tokens) else "$"
             if tope_sim == tok_tipo or tope_sim == tok_val:
@@ -466,7 +466,7 @@ def main():
     psp.calcular_SIGUIENTES()
     psp.calcular_PREDICCION()
 
-    # ── Detectar k mínimo ──
+    #  Detectar k mínimo 
     k, conflictos = psp.detectar_k()
     if conflictos:
         print(f" La gramática no es LL(k) con k ≤ 5. "
@@ -476,7 +476,7 @@ def main():
     else:
         print(f" Gramática LL({k}) detectada.\n")
 
-    # ── Mostrar gramática y tablas ──
+    #  Mostrar gramática y tablas 
     print(gram)
     filas_ps = [
         [nt,
@@ -499,7 +499,7 @@ def main():
 
     tabla = psp.tabla_M()
 
-    # ── Parsear entradas ──
+    #  Parsear entradas 
     entradas = leer_entradas(sys.argv[2])
     print("=" * 60)
     for linea in entradas:
